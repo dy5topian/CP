@@ -1,0 +1,16 @@
+## dude i suck fr fr , need to stop being clumsy
+def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        solve=[]
+        dic={}
+        for i in nums :
+            if i in dic.keys():
+                dic[i]+=1
+            else :
+                dic[i]=1
+            #{1:23,4:66,5:1} - k =2
+        j=sorted(dic.values(),reverse=True)[:k]
+        print(j)
+        for p in nums:
+            if dic[p] in j and p not in solve:
+                solve.append(p)
+        return solve
