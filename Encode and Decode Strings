@@ -1,0 +1,20 @@
+def encode(self,strs):
+    whole=''
+    for i in strs:
+        for j in i:
+            whole+=chr(ord(j)+3)
+        whole+='  '
+    if whole=='  ':
+        return '  '
+    return whole[:-2]
+def decode(self,s):
+    if s=='  ': return ['']
+    if s=='': return []
+    clean=[]
+    l=s.split("  ")
+    for i in l:
+        word=''
+        for j in i:
+            word+=chr(ord(j)-3)
+        clean.append(word)
+    return clean
