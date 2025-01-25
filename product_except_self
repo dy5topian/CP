@@ -1,0 +1,9 @@
+def productExceptSelf(self, nums: List[int]) -> List[int]:
+        l=[]
+        for i in range(len(nums)):
+            s=1
+            for j in range(len(nums)):
+                if j==i: continue
+                s*=nums[j]
+            l.append(s)
+        return l
